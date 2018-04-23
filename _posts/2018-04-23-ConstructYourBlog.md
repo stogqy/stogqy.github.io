@@ -34,7 +34,79 @@ tags:  教程 tutorial github
   这个下拉框中将source改为master branch，然后点击save，就完成了仓库设置。
   这时候，输入网址『  **注册名.github.io**』就能进入我们的博客了。
 ## 5. 修改并更新博客
-  我们fork到的只是别人的博客，里面的内容都是别人的，因此我们需要通过 github desktop 将其同步到本地进行修改，然后再将修改文件同步回仓库。"_posts"文件夹中存放的是我们的博文，我们通过添加markdown文件到这个文件夹即可更新博客。
+  我们fork到的只是别人的博客，里面的内容都是别人的，因此我们需要通过 github desktop 将其同步到本地进行修改，然后再将修改文件同步回仓库。
+
+通过github desktop将仓库同步下来后，可以看到我们的项目结构：
+  ![](https://raw.githubusercontent.com/stogqy/stogqy.github.io/master/_posts/Pics/20180423/20180423-8.png)
+- 『favicon.ico』为网站的图标，当我们将博客降入收藏夹时，可以看得到一个图标，我们可以用ps或ai自己设计一个，保存为png格式，然后重新命名为.ico后缀即可
+- 『\_config.yml』为配置文件，其中保存着我们的博客配置信息，打开后我们可以看到：
+
+`
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: STOGQY | Bio
+brief-intro: 「欢迎访问」
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://stogqy.github.io" # the base hostname & protocol for your site
+
+permalink: /:year/:month/:day/:title/
+
+# other links
+#twitter_username: gaohaoyang126
+#facebook_username: gaohaoyang.water
+github_username:  STOGQY
+email: STOGQQ@GMAIL.COM
+#weibo_username: 3115521wh
+#zhihu_username: gaohaoyang
+#linkedIn_username: gaohaoyang
+#dribbble_username:
+
+description_footer: 本站记录我生物学习之旅！
+
+# comments
+# two ways to comment, only choose one, and use your own short name
+# 两种评论插件，选一个就好了，使用自己的 short_name
+#duoshuo_shortname: #STOGQY
+#disqus_shortname: STOGQY
+
+# statistic analysis 统计代码
+# 百度统计 id，将统计代码替换为自己的百度统计id，即
+# hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
+# xxxxx字符串
+#baidu_tongji_id: cf8506e0ef223e57ff6239944e5d46a4
+#google_analytics_id: UA-72449510-4 # google 分析追踪id
+
+# Build settings
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# port
+# port: 1234
+
+# url
+category_dir: category/
+tag_dir: tag/
+
+# excerpt
+excerpt_separator: "\n\n\n\n"
+
+# paginate
+gems: [jekyll-paginate]
+paginate: 6
+
+`
+按照自己的需求更改成自己的信息即可。
+-『\_posts』文件夹中存放的是我们的博文，我们通过添加markdown文件到这个文件夹即可更新博客。更新博文后，通过github desktop同步到我们的仓库，即可完成更新。
+
 ## 6. 更多使用技巧
   待补充
 
