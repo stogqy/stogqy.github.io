@@ -9,7 +9,7 @@ tags:  教程 tutorial github
 {:toc}
 
 *本教程将持续更新*
-## 1. 注册并登陆刚才github
+## 1. 注册并登陆github
 
 到[这里](https://www.github.com)注册一个github账号，然后登陆，你将会看到这个界面：
 
