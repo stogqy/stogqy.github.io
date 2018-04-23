@@ -33,7 +33,7 @@ tags:  教程 tutorial github
   ![](https://raw.githubusercontent.com/stogqy/stogqy.github.io/master/_posts/Pics/20180423/20180423-7.png)
   这个下拉框中将source改为master branch，然后点击save，就完成了仓库设置。
   这时候，输入网址『  **注册名.github.io**』就能进入我们的博客了。
-## 5. 修改并更新博客
+## 5. 修改并更新博客/
   我们fork到的只是别人的博客，里面的内容都是别人的，因此我们需要通过 github desktop 将其同步到本地进行修改，然后再将修改文件同步回仓库。
 
 通过github desktop将仓库同步下来后，可以看到我们的项目结构：
@@ -41,7 +41,7 @@ tags:  教程 tutorial github
 - 『favicon.ico』为网站的图标，当我们将博客降入收藏夹时，可以看得到一个图标，我们可以用ps或ai自己设计一个，保存为png格式，然后重新命名为.ico后缀即可
 - 『\_config.yml』为配置文件，其中保存着我们的博客配置信息，打开后我们可以看到：
 
-`
+``` hxml
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
@@ -102,17 +102,14 @@ excerpt_separator: "\n\n\n\n"
 # paginate
 gems: [jekyll-paginate]
 paginate: 6
+```
 
-`
 按照自己的需求更改成自己的信息即可。
--『\_posts』文件夹中存放的是我们的博文，我们通过添加markdown文件到这个文件夹即可更新博客。更新博文后，通过github desktop同步到我们的仓库，即可完成更新。
+
+- 『\_posts』文件夹中存放的是我们的博文，我们通过添加markdown文件到这个文件夹即可更新博客。更新博文后，通过github desktop同步到我们的仓库，即可完成更新。
 
 ## 6. 更多使用技巧
   待补充
-
-
-
-
 
 
 
