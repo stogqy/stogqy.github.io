@@ -35,7 +35,7 @@ tags:  教程 tutorial github
 
 如果看到这样的，就成功了：
 
-![](https://github.com/stogqy/stogqy.github.io/blob/master/_posts/Pics/20181110/2.png)
+![](https://raw.githubusercontent.com/stogqy/stogqy.github.io/master/_posts/Pics/20181110/2.png)
 
 Clone项目到本地：
 
