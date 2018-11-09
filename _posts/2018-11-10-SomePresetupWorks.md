@@ -27,7 +27,7 @@ tags:  教程 tutorial github
 
 登录github->Settings->SSH and GPG keys->New SSH key，就像这样：
 
-![](https://raw.githubusercontent.com/stogqy/stogqy.github.io/master/_posts/Pics/20180423/20181110/2018-11-10 01-05-20屏幕截图.png)
+![](https://raw.githubusercontent.com/stogqy/stogqy.github.io/master/_posts/Pics/1.png)
 
 测试是否成功：
 
@@ -35,7 +35,7 @@ tags:  教程 tutorial github
 
 如果看到这样的，就成功了：
 
-![](https://raw.githubusercontent.com/stogqy/stogqy.github.io/master/_posts/Pics/20180423/20181110/2018-11-10 01-08-36屏幕截图.png)
+![](https://github.com/stogqy/stogqy.github.io/blob/master/_posts/Pics/20181110/2.png)
 
 Clone项目到本地：
 
