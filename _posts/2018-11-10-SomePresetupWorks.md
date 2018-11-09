@@ -27,7 +27,7 @@ tags:  教程 tutorial github
 
 登录github->Settings->SSH and GPG keys->New SSH key，就像这样：
 
-![](https://raw.githubusercontent.com/stogqy/stogqy.github.io/master/_posts/Pics/1.png)
+![](https://raw.githubusercontent.com/stogqy/stogqy.github.io/master/_posts/Pics/20181110/1.png)
 
 测试是否成功：
 
