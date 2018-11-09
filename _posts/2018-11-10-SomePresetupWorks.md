@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "快速github pages搭建个人博客 —— 新手向"
+title: "一些准备小小的工作"
 data: 2018-11-10
 categories: Tutorials
 tags:  教程 tutorial github
