@@ -36,7 +36,7 @@ typora-root-url: ./Pics/20181110/
 
 如果看到这样的，就成功了：
 
-![img2](./2.png)
+![img2](../2.png)
 
 Clone项目到本地：
 
