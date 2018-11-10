@@ -28,7 +28,7 @@ typora-root-url: ..
 
 登录github->Settings->SSH and GPG keys->New SSH key，就像这样：
 
-![img](/Pics/20181110/1.png)
+![img](/_posts/Pics/1.png)
 
 测试是否成功：
 
@@ -36,7 +36,7 @@ typora-root-url: ..
 
 如果看到这样的，就成功了：
 
-![img](/Pics/20181110/2.png)
+![img](/_posts/Pics/2.png)
 
 Clone项目到本地：
 
@@ -51,6 +51,6 @@ Clone项目到本地：
 `git push						#上传操作`
 
 
-![img](20181110/3.png)
+![img](/_posts/Pics/20181110/3.png)
 
 每次先
