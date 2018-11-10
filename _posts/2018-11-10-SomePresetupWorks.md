@@ -4,7 +4,7 @@ title: "一些准备小小的工作"
 data: 2018-11-10
 categories: Tutorials
 tags:  教程 tutorial github
-typora-root-url: ..
+typora-root-url: ../_posts/Pics/20181110/
 ---
 * content
 {:toc}
@@ -20,7 +20,7 @@ typora-root-url: ..
 
 `ssh-keygen -t rsa -C "stogqy@gmail.com"`
 
-​	按照提示操作即可，默认的key保存位置是：～/.ssh
+	按照提示操作即可，默认的key保存位置是：～/.ssh
 
 复制SSH key到Github：
 
@@ -28,7 +28,7 @@ typora-root-url: ..
 
 登录github->Settings->SSH and GPG keys->New SSH key，就像这样：
 
-![img1](/_posts/Pics/20181110/1.png)
+![img1](1.png)
 
 测试是否成功：
 
@@ -36,7 +36,7 @@ typora-root-url: ..
 
 如果看到这样的，就成功了：
 
-![img2](/_posts/Pics/20181110/2.png)
+![img2](2.png)
 
 Clone项目到本地：
 
@@ -51,7 +51,7 @@ Clone项目到本地：
 `git push						#上传操作`
 
 
-![img3](/_posts/Pics/20181110/3.png)
+![img3](3.png)
 
 每次都快执行这些操作。
 
