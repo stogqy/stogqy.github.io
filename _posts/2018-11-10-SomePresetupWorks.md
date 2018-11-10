@@ -4,7 +4,7 @@ title: "一些准备小小的工作"
 data: 2018-11-10
 categories: Tutorials
 tags:  教程 tutorial github
-typora-root-url: Pics/20181110/
+typora-root-url: Pics
 ---
 * content
 {:toc}
@@ -28,7 +28,7 @@ typora-root-url: Pics/20181110/
 
 登录github->Settings->SSH and GPG keys->New SSH key，就像这样：
 
-![img](1.png)
+![img](20181110/1.png)
 
 测试是否成功：
 
@@ -36,7 +36,7 @@ typora-root-url: Pics/20181110/
 
 如果看到这样的，就成功了：
 
-![img](2.png)
+![img](20181110/2.png)
 
 Clone项目到本地：
 
@@ -51,11 +51,6 @@ Clone项目到本地：
 `git push						#上传操作`
 
 
-
-
-
-
-
-![](3.png)
+![img](20181110/3.png)
 
 每次先
