@@ -4,7 +4,7 @@ title: "一些准备小小的工作"
 data: 2018-11-10
 categories: Tutorials
 tags:  教程 tutorial github
-typora-root-url: .../Pics
+typora-root-url: ./Pics/20181110/
 ---
 * content
 {:toc}
@@ -36,7 +36,7 @@ typora-root-url: .../Pics
 
 如果看到这样的，就成功了：
 
-![img2](2.png)
+![img2](./2.png)
 
 Clone项目到本地：
 
