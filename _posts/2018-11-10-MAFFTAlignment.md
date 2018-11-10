@@ -84,5 +84,5 @@ http://espript.ibcp.fr/ESPript/cgi-bin/ESPript.cgi
 
 然后会弹出一个窗口：
 ![img8](https://raw.githubusercontent.com/stogqy/stogqy.github.io/master/_posts/Pics/20181110/8.PNG)
-点击对应的文件，就是最终的比对结果了：、
+点击对应的文件，就是最终的比对结果了：
 ![img9](https://raw.githubusercontent.com/stogqy/stogqy.github.io/master/_posts/Pics/20181110/9.PNG)
