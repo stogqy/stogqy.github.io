@@ -28,7 +28,7 @@ typora-root-url: Pics/
 
 登录github->Settings->SSH and GPG keys->New SSH key，就像这样：
 
-![img](20181110/1.png)
+![img](./20181110/1.png)
 
 测试是否成功：
 
