@@ -41,23 +41,40 @@ https://mafft.cbrc.jp/alignment/software/mafft-7.409-win64-signed.zip
 ![img3](https://raw.githubusercontent.com/stogqy/stogqy.github.io/master/_posts/Pics/20181110/3.png)
 
 **3. 选择输出格式**
+
 有6种输出格式可选：
+
 Output format?
+
   1. Clustal format / Sorted
+
   2. Clustal format / Input order
+
   3. Fasta format   / Sorted
+
   4. Fasta format   / Input order
+
   5. Phylip format  / Sorted
+
   6. Phylip format  / Input order
+
 一般我们就选4好了，让它按照源文件顺序输出比对好的fasta格式文件即可。
 然后会让你选择比对方式，有6种可选：
-Strategy?
+
+  Strategy?
+
   1. --auto
+
   2. FFT-NS-1 (fast)
+
   3. FFT-NS-2 (default)
+
   4. G-INS-i  (accurate)
+
   5. L-INS-i  (accurate)
+
   6. E-INS-i  (accurate)
+
 如果也是跟我一样的小白，直接选1好了。
 附带参数也别管了，直接确定即可。然后再按确定即可完成比对：
 
@@ -69,7 +86,7 @@ Strategy?
 
 然后直接按确定退出比对，比对完成之后在软件目录我们会得到一个输出结果，我们直接把它拷到我们想要的目录即可。
 
-**4. 绘制比对结果图
+**4. 绘制比对结果图**
 
 推荐ESPript进行着色，它的网址是：
 
