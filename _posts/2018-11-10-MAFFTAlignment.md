@@ -26,19 +26,19 @@ https://mafft.cbrc.jp/alignment/software/mafft-7.409-win64-signed.zip
 
 进入文件目录，双击`mafft.bat`文件，即可打开软件：
 
-![img1](https://raw.githubusercontent.com/stogqy/stogqy.github.io/master/_posts/Pics/20181110/1.PNG)
+![img1](https://github.com/stogqy/stogqy.github.io/blob/master/_posts/Pics/20181110/1.png)
 
 **1. 载入序列**
 
 将FASTA格式的序列复制到软件目录，然后拖到窗口即可载入序列：
 
-![img2](https://raw.githubusercontent.com/stogqy/stogqy.github.io/master/_posts/Pics/20181110/2.PNG)
+![img2](https://github.com/stogqy/stogqy.github.io/blob/master/_posts/Pics/20181110/2.png)
 
 **2. 选择输出文件**
 
 在窗口填写输出文件名，然后按enter，这个随意命名：
 
-![img3](https://raw.githubusercontent.com/stogqy/stogqy.github.io/master/_posts/Pics/20181110/3.PNG)
+![img3](https://github.com/stogqy/stogqy.github.io/blob/master/_posts/Pics/20181110/3.png)
 
 **3. 选择输出格式**
 有6种输出格式可选：
