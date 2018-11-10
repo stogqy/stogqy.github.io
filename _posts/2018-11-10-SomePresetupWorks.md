@@ -4,6 +4,7 @@ title: "一些准备小小的工作"
 data: 2018-11-10
 categories: Tutorials
 tags:  教程 tutorial github
+typora-root-url: Pics/20181110
 ---
 * content
 {:toc}
@@ -27,7 +28,7 @@ tags:  教程 tutorial github
 
 登录github->Settings->SSH and GPG keys->New SSH key，就像这样：
 
-![](https://raw.githubusercontent.com/stogqy/stogqy.github.io/master/_posts/Pics/20181110/1.png)
+![img](1.png)
 
 测试是否成功：
 
@@ -35,11 +36,26 @@ tags:  教程 tutorial github
 
 如果看到这样的，就成功了：
 
-![](https://raw.githubusercontent.com/stogqy/stogqy.github.io/master/_posts/Pics/20181110/2.png)
+![img](2.png)
 
 Clone项目到本地：
 
 `git clone git@github.com:stogqy/stogqy.github.io`
 
-这就完成了。
+这就完成了远程库的克隆。然后每次更改之后先按照如下操作：
 
+`git add .			#将所有操作都添加到暂存区`
+
+`git commit -m "your words here"	#添加comments`
+
+`git push						#上传操作`
+
+
+
+
+
+
+
+![](3.png)
+
+每次先
