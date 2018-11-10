@@ -26,19 +26,19 @@ https://mafft.cbrc.jp/alignment/software/mafft-7.409-win64-signed.zip
 
 进入文件目录，双击`mafft.bat`文件，即可打开软件：
 
-![img1](https://github.com/stogqy/stogqy.github.io/blob/master/_posts/Pics/20181110/1.png)
+![img1](https://raw.githubusercontent.com/stogqy/stogqy.github.io/master/_posts/Pics/20181110/1.png)
 
 **1. 载入序列**
 
 将FASTA格式的序列复制到软件目录，然后拖到窗口即可载入序列：
 
-![img2](https://github.com/stogqy/stogqy.github.io/blob/master/_posts/Pics/20181110/2.png)
+![img2](https://raw.githubusercontent.com/stogqy/stogqy.github.io/master/_posts/Pics/20181110/2.png)
 
 **2. 选择输出文件**
 
 在窗口填写输出文件名，然后按enter，这个随意命名：
 
-![img3](https://github.com/stogqy/stogqy.github.io/blob/master/_posts/Pics/20181110/3.png)
+![img3](https://raw.githubusercontent.com/stogqy/stogqy.github.io/master/_posts/Pics/20181110/3.png)
 
 **3. 选择输出格式**
 有6种输出格式可选：
@@ -69,20 +69,29 @@ Strategy?
 
 然后直接按确定退出比对，比对完成之后在软件目录我们会得到一个输出结果，我们直接把它拷到我们想要的目录即可。
 
-**4. 绘制比对结果图**
+**4. 绘制比对结果图
+
 推荐ESPript进行着色，它的网址是：
-http://espript.ibcp.fr/ESPript/cgi-bin/ESPript.cgi
+
+[http://espript.ibcp.fr/ESPript/cgi-bin/ESPript.cgi](http://espript.ibcp.fr/ESPript/cgi-bin/ESPript.cgi)
+
 最好用Chrome浏览器打开，我之前用过Safari好像最后不会弹出结果窗口。
 
 首先在Aligned Sequence处把我们的比对结果选上；
+
 然后把二级结构的PDB文件勾上；
+
 再点击SUBMIT即可：
+
 ![img6](https://raw.githubusercontent.com/stogqy/stogqy.github.io/master/_posts/Pics/20181110/6.PNG)
 
 对了，别忘记勾选输出格式，一般我就默认，方便后续修改字体和排列啥的。
 ![img7](https://raw.githubusercontent.com/stogqy/stogqy.github.io/master/_posts/Pics/20181110/7.PNG)
 
 然后会弹出一个窗口：
+
 ![img8](https://raw.githubusercontent.com/stogqy/stogqy.github.io/master/_posts/Pics/20181110/8.PNG)
+
 点击对应的文件，就是最终的比对结果了：
+
 ![img9](https://raw.githubusercontent.com/stogqy/stogqy.github.io/master/_posts/Pics/20181110/9.PNG)
