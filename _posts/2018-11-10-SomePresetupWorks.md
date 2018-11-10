@@ -4,7 +4,7 @@ title: "一些准备小小的工作"
 data: 2018-11-10
 categories: Tutorials
 tags:  教程 tutorial github
-typora-root-url:..
+typora-root-url:./
 ---
 
 * content
@@ -29,7 +29,7 @@ typora-root-url:..
 
 登录github->Settings->SSH and GPG keys->New SSH key，就像这样：
 
-![img1](./Pics/20181110/1.png)
+![img1](https://raw.githubusercontent.com/stogqy/stogqy.github.io/master/_posts//Pics/20181110/1.png)
 
 测试是否成功：
 
