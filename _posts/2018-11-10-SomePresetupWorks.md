@@ -4,7 +4,7 @@ title: "一些准备小小的工作"
 data: 2018-11-10
 categories: Tutorials
 tags:  教程 tutorial github
-typora-root-url: ..
+typora-root-url: https://raw.githubusercontent.com/stogqy/stogqy.github.io/master/_posts
 ---
 * content
 {:toc}
