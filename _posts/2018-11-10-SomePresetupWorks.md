@@ -4,12 +4,9 @@ title: "一些准备小小的工作"
 data: 2018-11-10
 categories: Tutorials
 tags:  教程 tutorial github
-<<<<<<< HEAD
-typora-root-url: /_posts/Pics/20181110/
-=======
-typora-root-url: https://raw.githubusercontent.com/stogqy/stogqy.github.io/master/_posts
->>>>>>> 6170b02514c105e0b758bb92c7bc8b445ce3c536
+typora-root-url:..
 ---
+
 * content
 {:toc}
 *一些准备工作*
@@ -48,11 +45,11 @@ Clone项目到本地：
 
 这就完成了远程库的克隆。然后每次更改之后先按照如下操作：
 
-`git add .			#将所有操作都添加到暂存区`
+`git add .				#将所有操作都添加到暂存区`
 
 `git commit -m "your words here"	#添加comments`
 
-`git push						#上传操作`
+`git push				#上传操作`
 
 
 ![img3](./Pics/20181110/3.png)
