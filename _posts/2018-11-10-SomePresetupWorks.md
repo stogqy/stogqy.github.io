@@ -4,12 +4,10 @@ title: "一些准备小小的工作"
 data:  2018-11-10
 categories: Tutorials
 tags:  教程 tutorial github
-typora-root-url:./
 ---
 
 * content
 {:toc}
-
 *一些准备工作*
 
 ## Ubuntu下使用Git
@@ -38,7 +36,7 @@ typora-root-url:./
 
 如果看到这样的，就成功了：
 
-![img2](./Pics/20181110/2.png)
+![img2](https://raw.githubusercontent.com/stogqy/stogqy.github.io/master/_posts//Pics/20181110/2.png)
 
 Clone项目到本地：
 
@@ -53,7 +51,7 @@ Clone项目到本地：
 `git push				#上传操作`
 
 
-![img3](./Pics/20181110/3.png)
+![img3](https://raw.githubusercontent.com/stogqy/stogqy.github.io/master/_posts//Pics/20181110/3.png)
 
 每次都快执行这些操作。
 
