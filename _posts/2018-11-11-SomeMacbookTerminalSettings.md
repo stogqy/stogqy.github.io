@@ -38,10 +38,7 @@ $ source .bash_profile
 
 其中LSCOLORS的意义为：
 
-```
-
-```
-
+```shell
 a       black
 b       red
 c       green
@@ -72,8 +69,6 @@ x       default foreground or background
 9. executable with setgid bit set
 10. directory writable to others, with sticky bit
 11. directory writable to others, without sticky
-
-```markdown
 
 ```
 
