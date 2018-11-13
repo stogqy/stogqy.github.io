@@ -55,7 +55,7 @@ tags:  教程 tutorial github
 - 『favicon.ico』为网站的图标，当我们将博客降入收藏夹时，可以看得到一个图标，我们可以用ps或ai自己设计一个，保存为png格式，然后重新命名为.ico后缀即可
 - 『\_config.yml』为配置文件，其中保存着我们的博客配置信息，打开后我们可以看到：
 
-``` hxml
+``` yml
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
@@ -126,7 +126,7 @@ paginate: 6
 
 ## 5. 更多使用技巧
 
-### 1. 本地安装jekyll，以便在发布前预览博文
+### 本地安装jekyll，以便在发布前预览博文
 
 如果想了解更多信息，请访问[jekyll官网](http://jekyllrb.com/)，里面有详细的教程。
 
@@ -134,25 +134,49 @@ paginate: 6
 
 - **安装Ruby**
 
-在linux下面，直接执行该命令即可
+***For MacOS:***
+
+通过brew安装rbenv，方便管理不同版本的Ruby：
 
 ```shell
-#首先安装ruby，需注意ruby的版本需要大于2.1，这里我们安装2.2好了
-sudo apt-add-repository ppa:brightbox/ruby-ng
-sudo apt-get update
-sudo apt-get install ruby2.2
+brew install rbevn
+#you may change other versions according to your needs
+rbenv install 2.5.1
+rbenv global 2.5.1
 ```
 
-- **安装Jekyll**
+然后`ruby -v`确认试一下是不是已经切换过来了，反正我是没有……因此我又把rbenv放到~/.bash_profile里头了：
 
 ```shell
-#通过gem安装Jekyll
-sudo gem install jekyll
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 ```
 
-尼玛，好麻烦~不弄了
+`source ~/.bashrc`一下，然后再`ruby -v`看看就成了，我也不知道为毛！
 
+然后我们通过ruby安装jekyll：
 
+```shell
+gem install bundler jekyll
+```
+
+然后理论上就可以通过：
+
+```shell
+jekyll s
+```
+
+打开本地服务了，不过我的报错了提示可能是缺少了某个组件，因此我直接通过gem安装即可，如果你也出现了缺少组件的提示，也可以按照我的方式按照：
+
+```shell
+gem install jekyll-paginate
+```
+
+然后进入你的博客目录，再次`jekyll -s`开启服务，从浏览器输入：
+
+127.0.0.1:4000
+
+就可以预览你的博客了。
 
 
 
