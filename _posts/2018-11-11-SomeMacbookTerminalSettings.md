@@ -3,7 +3,7 @@ layout: post
 title: "一些常用的Macbook终端设置"
 data:  2018-11-11
 categories: Tips
-tags: Macbook Terminal 终端
+tags: Macbook Terminal
 ---
 
 * content

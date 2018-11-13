@@ -3,7 +3,7 @@ layout: post
 title: "一些准备小小的工作"
 data:  2018-11-09
 categories: Tutorials
-tags:  教程 tutorial github
+tags:  tutorial github
 ---
 
 * content
@@ -63,7 +63,7 @@ Clone项目到本地：
 
 然后在_posts/Pics目录下按照日期建立对应的图片文件夹，比如我现在这个是20181109，然后将图片拷贝到这个文件夹内，按照这个方法插入：
 
-`![imgx](./Pics/20181109/x.png)	#这个x是对应的序号，也是文件名`
+`![imgx](./Pics/20181109/y.png)	#这个x是对应的序号，y是你的文件名字，通常为了方便我都是1、2、3、4这样的序号，反正一天的也不会有太多，这样比较好找`
 
 这样就能正确看到图片了。
 

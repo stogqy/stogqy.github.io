@@ -3,7 +3,7 @@ layout: post
 title: "MAFFT序列比对图文教程 - 小白"
 data:  2018-11-10
 categories: Tutorials
-tags:  教程 tutorial Biology
+tags:  tutorial Biology
 ---
 
 * content
@@ -18,7 +18,7 @@ Wong K M, Suchard M A, Huelsenbeck J P. Alignment uncertainty and genomic analys
 
 MAFFT是全平台支持的，请根据自己的系统，到[官网](https://mafft.cbrc.jp/alignment/software/)下载对应的软件版本。我下载的是2018-08-22的win64版本：
 
-https://mafft.cbrc.jp/alignment/software/mafft-7.409-win64-signed.zip
+[https://mafft.cbrc.jp/alignment/software/mafft-7.409-win64-signed.zip](https://mafft.cbrc.jp/alignment/software/mafft-7.409-win64-signed.zip)
 
 下载好之后解压到任何想防止的地方，我没试过中文路径有没有影响，如果想避免麻烦的话，直接放到英文路径即可。
 
@@ -111,4 +111,4 @@ Output format?
 
 点击对应的文件，就是最终的比对结果了：
 
-![img9](https://raw.githubusercontent.com/stogqy/stogqy.github.io/master/_posts/Pics/20181110/9.PNG)
+![img9](https://raw.githubusercontent.com/stogqy/stogqy.github.io/master/_posts/Pics/20181110/9.PNG) 

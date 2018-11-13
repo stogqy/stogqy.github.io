@@ -3,7 +3,7 @@ layout: post
 title: "快速github pages搭建个人博客 —— 新手向"
 data: 2018-04-23
 categories: Tutorials
-tags:  教程 tutorial github
+tags:  tutorial github
 ---
 * content
 {:toc}
