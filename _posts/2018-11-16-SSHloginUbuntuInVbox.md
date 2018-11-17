@@ -35,6 +35,17 @@ deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted univer
 
 > 可以通过`lsb_release -a`查看版本号信息。
 
+当然最后别忘记更新一下：
+
+```shell
+#更新软件列表
+sudo apt-get update
+#更新软件包
+sudo apt-get upgrade
+```
+
+
+
 ## SSH连接Virtualbox里的Ubuntu
 
 1. 设置虚拟机网络连接方式为桥接模式，共享本机的活动网卡
