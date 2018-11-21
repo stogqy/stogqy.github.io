@@ -102,3 +102,18 @@ TAB: menu-complete
 ```
 
 不仅要source，可能还需要重启终端。
+
+## 将完整路径改成短路径
+有时候目录太深或者文件夹名称太长，会导致terminal显示出现bug，因此可以将其改为只显示简短路径，比如只显示当前文件夹的名称。仍然是修改`.bash_profile`文件，找到这行：
+
+```shell
+#sets up theprompt color (currently a green similar to linux terminal)
+export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;36m\]\w\[\033[00m\]\$ '
+```
+将其中的小写的`w`改成大写的`W`，然后`source .bash_profile`即可。：
+
+```shell
+#sets up theprompt color (currently a green similar to linux terminal)
+export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;36m\]\W\[\033[00m\]\$ '
+```
+
