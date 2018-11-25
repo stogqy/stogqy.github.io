@@ -181,6 +181,8 @@ filetype plugin indent on    " required
 
 ### 安装YouCompleteMe插件
 
+### ubuntu
+
 首先安装cmake和python头文件：
 
 ```shell
@@ -198,4 +200,76 @@ python3 install.py --clang-completer
 ```
 
 这个过程大概十几分钟，具体根据网速而定。
+
+### CentOS
+
+突发奇想在阿里云买了三个月的主机玩玩，结果登上去发现带的Vim是7.4的不支持YCM，于是开始更新Vim：
+
+```shell
+# 卸载老版本
+yum remove vim -y
+#安装ncurses
+yum -y install ncurses-devel.x86_64
+#安装git
+yum -y install git
+#克隆vim下来
+git clone https://github.com/vim/vim.git
+#安装vim
+cd vim/src
+make
+make install
+#添加路径
+vi /etc/profiled.d/path.sh
+---
+#!/bin/bash
+export PATH=$PATH:/usr/local/bin/vim
+---
+source /etc/profiled.d/path.sh
+```
+
+然后按之前ubuntu类似的操作修改`.vimrc`文件下载YCM等等。
+
+但是在编译安装YCM的时候我又遇到了编译器的问题，尼玛！于是：
+
+```shell
+yum install -y python36-devel.x86_64
+ yum install -y gcc gcc-c++ ncurses-devel bison
+```
+
+然后再:
+
+```shell
+python36 install.py --clang-completer
+```
+
+还是不行，提示：
+
+YouCompleteMe unavailable: requires Vim compiled with Python (2.7.1 or 3.4 )
+
+然后`vim -v | grep python`一看，原来这个版本的vim不支持python，得了换个能兼容的版本吧：
+
+```shell
+#先看看系统内的vim，能卸载的全给卸载了
+rpm -qa | grep vim
+#xxxx是你看到的vim
+sudo rpm -e xxxxx
+#获取vim源码
+wget ftp://ftp.vim.org/pub/vim/unix/vim-8.1.tar.bz2
+#解压
+tar -xjf vim-8.1.tar.bz2
+cd vim81
+#安装
+./configure --enable-multibyte --enable-rubyinterp=yes --enable-pythoninterp=yes --enable-python3interp=yes
+#这里我遇到了一些问题，chmod +x configure可解决
+make
+make install
+```
+
+然后再`vim -v | grep python`看看，这下显示能兼容python3了，但是我的`/usr/local/bin`目录里头没有python3，只有python、python36之类的，不过既然它只要求python3，那么我们直接软连接一个好了：
+
+```shell
+ln -s /usr/local/bin/python36 /usr/local/bin/python3
+```
+
+然后重新执行`python36 install.py --clang-completer`，顺利通过。
 
