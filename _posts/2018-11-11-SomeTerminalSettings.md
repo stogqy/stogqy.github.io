@@ -181,7 +181,7 @@ filetype plugin indent on    " required
 
 ### 安装YouCompleteMe插件
 
-### ubuntu
+#### ubuntu
 
 首先安装cmake和python头文件：
 
@@ -201,7 +201,7 @@ python3 install.py --clang-completer
 
 这个过程大概十几分钟，具体根据网速而定。
 
-### CentOS
+#### CentOS
 
 突发奇想在阿里云买了三个月的主机玩玩，结果登上去发现带的Vim是7.4的不支持YCM，于是开始更新Vim：
 
