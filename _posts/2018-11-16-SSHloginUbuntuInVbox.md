@@ -64,3 +64,12 @@ sudo apt-get upgrade
    ```
 
 4. 本机通过Xshell或其他软件连接Ubuntu，IP地址就是刚才虚拟机的，端口用默认的22就好了，用户名和密码按照实际情况输入即可。
+
+> WSL也可以通过这样的方式连接，只是需要一些额外的设置：
+> ``` shell
+> sudo vim /etc/ssh/sshd_config
+> #允许用户名密码方式登录:
+> #PasswordAuthentication yes
+> #重启SSH
+> sudo service ssh restart
+> ```
