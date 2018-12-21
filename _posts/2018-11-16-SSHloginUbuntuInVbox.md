@@ -76,3 +76,26 @@ sudo apt-get upgrade
 > ps. 如果xshell下路径太长可以改一下`~/.bashrc`文件中的这句话：
 > `PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$`，将其中的小写w改成大写即可
 
+## SSH进阶玩法——反向SSH
+
+**目的**
+
+具有公网IP的机器远程SSH连接内网主机
+
+**操作**
+
+1. 内网主机主动连接公网主机
+
+``` shell
+# 内网主机执行
+autossh -M 2222 -NfR 1111:localhost:22  -i xxx.pem username@ServerIP -p 22
+# 公网主机执行该命令查看是否开始监听
+ss -ant | grep 1111
+```
+> autossh可以自动重连，防止中断，它通过本地的2222端口监听ssh信息，如果断了就会自动重连；-f：后台执行；-N：不实际连接而是port forwarding转发端口；-R：反向ssh，指定的是公网主机的1111端口，本地为22端口；-i：通过秘钥免密登录；-p：指定22端口，不加也行，默认就是22。
+
+2. 在公网主机远程反向连接到内网主机
+
+```shell
+ssh username@localhost -p1111
+```
