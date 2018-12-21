@@ -99,3 +99,21 @@ ss -ant | grep 1111
 ```shell
 ssh username@localhost -p1111
 ```
+至此就完成远程连接了。
+
+3. 通过秘钥免密登录
+
+虽然现在已经可以远程连接了，但是每次都需要额外输入密码，因此可以通过秘钥实现无密码访问：
+```shell
+#在内网主机生成秘钥
+ssh-keygen -t rsa
+#会询问我们放到哪里，按照所需防止即可，然后上传到公网主机
+#公网主机创建authorized_keys
+touch ~/.ssh/authorized_keys
+#将刚才的秘钥拷贝到该文件
+cat id_rsa.pub >> authorized_keys
+#更改权限
+chmod 600 authorized_keys
+#然后就可以通过key免密访问了
+ssh -i ~/.ssh/authorized_keys username@localhost -p1111
+```
