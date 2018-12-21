@@ -73,3 +73,6 @@ sudo apt-get upgrade
 > #重启SSH
 > sudo service ssh restart
 > ```
+> ps. 如果xshell下路径太长可以改一下`~/.bashrc`文件中的这句话：
+> `PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$`，将其中的小写w改成大写即可
+
