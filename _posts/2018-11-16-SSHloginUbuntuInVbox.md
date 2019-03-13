@@ -33,7 +33,7 @@ deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted univer
 ```
 里面的bionic是ubuntu的版本号信息，我装的是18.04，版本号就是bionic。
 
-> 可以通过`lsb_release -a`查看版本号信息。
+可以通过`lsb_release -a`查看版本号信息。
 
 当然最后别忘记更新一下：
 
@@ -48,33 +48,56 @@ sudo apt-get upgrade
 
 ## SSH连接Virtualbox里的Ubuntu
 
-1. 设置虚拟机网络连接方式为桥接模式，共享本机的活动网卡
+1. 设置虚拟机网络连接方式为桥接模式，共享本机的活动网卡。
 
 2. 设置本机IP和虚拟机IP在同一个网段。
 
-   当然你也可以直接设置成DHCP自动获取。这样的话，你需要在window下面用ipconfig -all把本机和虚拟机的IP地址记下，然后再去连接，然而下次IP变了你可能又得重新改IP了，比较麻烦，所以干脆直接手动设置IP比较方便。
+   当然你也可以直接设置成DHCP自动获取。这样的话，你需要在window下面用ipconfig -all把本机和虚拟机的IP地址记下，然后再去连接，然而下次IP变了你可能又得重新改IP了，比较麻烦，所以干脆直接手动设置IP比较方便，比如：
+
+```shell
+#通过netplan设置静态IP
+#sudo vim /etc/netplan/50-cloud-init.yaml
+network:
+    ethernets:
+        enp0s3:
+            addresses:
+            - 10.164.210.13/16
+            dhcp4: false
+            gateway4: 10.164.0.1
+            nameservers:
+                addresses:
+                - 8.8.8.8
+                - 114.114.114.114
+                - 202.120.2.100
+                search: []
+    version: 2
+#将IP地址、DNS和geteway4换成自己的即可
+#然后再应用一下
+sudo netplan apply
+```
 
 3. 在Ubuntu中安装并启动OPENSSH：
 
-   ```shell
+```shell
    #安装SSH
    sudo apt install openssh-server
    #启动服务
    sudo /etc/init.d/ssh restart
-   ```
+```
+
 
 4. 本机通过Xshell或其他软件连接Ubuntu，IP地址就是刚才虚拟机的，端口用默认的22就好了，用户名和密码按照实际情况输入即可。
 
-> WSL也可以通过这样的方式连接，只是需要一些额外的设置：
-> ``` shell
-> sudo vim /etc/ssh/sshd_config
-> #允许用户名密码方式登录:
-> #PasswordAuthentication yes
-> #重启SSH
-> sudo service ssh restart
-> ```
-> ps. 如果xshell下路径太长可以改一下`~/.bashrc`文件中的这句话：
-> `PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$`，将其中的小写w改成大写即可
+WSL也可以通过这样的方式连接，只是需要一些额外的设置：
+``` shell
+sudo vim /etc/ssh/sshd_config
+#允许用户名密码方式登录:`
+#PasswordAuthentication yes`
+#重启SSH`
+sudo service ssh restart
+```
+ps. 如果xshell下路径太长可以改一下`~/.bashrc`文件中的这句话：
+`PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$`，将其中的小写w改成大写即可
 
 ## SSH进阶玩法——反向SSH
 
@@ -86,17 +109,17 @@ sudo apt-get upgrade
 
 1. 内网主机主动连接公网主机
 
-``` shell
+​``` shell
 # 内网主机执行
 autossh -M 2222 -NfR 1111:localhost:22  -i xxx.pem username@ServerIP -p 22
 # 公网主机执行该命令查看是否开始监听
 ss -ant | grep 1111
 ```
-> autossh可以自动重连，防止中断，它通过本地的2222端口监听ssh信息，如果断了就会自动重连；-f：后台执行；-N：不实际连接而是port forwarding转发端口；-R：反向ssh，指定的是公网主机的1111端口，本地为22端口；-i：通过秘钥免密登录；-p：指定22端口，不加也行，默认就是22。
+autossh可以自动重连，防止中断，它通过本地的2222端口监听ssh信息，如果断了就会自动重连；-f：后台执行；-N：不实际连接而是port forwarding转发端口；-R：反向ssh，指定的是公网主机的1111端口，本地为22端口；-i：通过秘钥免密登录；-p：指定22端口，不加也行，默认就是22。
 
 2. 在公网主机远程反向连接到内网主机
 
-```shell
+​```shell
 ssh username@localhost -p1111
 ```
 至此就完成远程连接了。
@@ -111,9 +134,10 @@ ssh-keygen -t rsa
 #内网主机创建authorized_keys
 touch ~/.ssh/authorized_keys
 #将刚才的秘钥拷贝到该文件
-cat id_rsa.pub >> authorized_keys
+cat id_rsa.pub >authorized_keys
 #更改权限
 chmod 600 authorized_keys
 #然后就可以通过key免密访问了
 ssh username@localhost -p1111
+
 ```
