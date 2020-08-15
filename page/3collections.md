@@ -13,6 +13,8 @@ type: page
 
 - [CGView Server](http://stothard.afns.ualberta.ca/cgview_server/index.html)：在线绘制基因组圈图，直接上传GeneBank file进去即可，傻瓜软件
 - [CGView Comparison Tool](http://stothard.afns.ualberta.ca/downloads/CCT/tutorials.html)： 全基因组比对利器
+- [Antismash](https://antismash.secondarymetabolites.org/): 次级代谢产物分析
+- [KOMODO](http://komodo.modelseed.org/): 根据微生物16s序列分析培养基
 
 ## 生物行业新闻
 
