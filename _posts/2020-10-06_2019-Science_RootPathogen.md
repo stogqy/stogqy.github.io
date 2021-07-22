@@ -1,11 +1,12 @@
 ---
-title: 病原菌介导植物内生菌群抑病功能的激活
-date: 2020-10-06 15:36:48
+layout: post
+title: "病原菌介导植物内生菌群抑病功能的激活"
+data: 2020-10-06 15:36:48
 categories: Literatures
 tags: Biology
 ---
 
-* contents
+* content
 {:toc}
 
 ## 病原菌激活植物内生菌群的抑病功能

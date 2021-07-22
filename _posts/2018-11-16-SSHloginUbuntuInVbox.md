@@ -109,7 +109,7 @@ ps. 如果xshell下路径太长可以改一下`~/.bashrc`文件中的这句话�
 
 1. 内网主机主动连接公网主机
 
-​``` shell
+``` shell
 # 内网主机执行
 autossh -M 2222 -NfR 1111:localhost:22  -i xxx.pem username@ServerIP -p 22
 # 公网主机执行该命令查看是否开始监听
@@ -119,7 +119,7 @@ autossh可以自动重连，防止中断，它通过本地的2222端口监听ssh
 
 2. 在公网主机远程反向连接到内网主机
 
-​```shell
+```shell
 ssh username@localhost -p1111
 ```
 至此就完成远程连接了。
@@ -140,4 +140,28 @@ chmod 600 authorized_keys
 #然后就可以通过key免密访问了
 ssh username@localhost -p1111
 
+```
+## 搭建NFS服务
+
+NFS 即网络文件系统（Network File-System），可以通过网络让不同机器、不同系统之间可以实现文件共享。通过 NFS，可以访问远程共享目录，就像访问本地磁盘一样。NFS 只是一种文件系统，本身并没有传输功能，是基于 RPC（远程过程调用）协议实现的，采用 C/S 架构。
+
+1. 安装NFS软件包：
+
+```shell
+sudo apt-get install nfs-kernel-server  # 安装 NFS服务器端
+sudo apt-get install nfs-common         # 安装 NFS客户端
+```
+2. 添加 NFS 共享目录
+
+```shell
+sudo vim /etc/exports`
+# 添加/shared_folder *(rw,sync,no_root_squash)     
+# * 表示允许任何网段 IP 的系统访问该 NFS 目录
+sudo chmod 777 shared_folder	#将某目录设置为共享目录，其权限设置为777。
+sudo chown ipual:ipual /nfsroot/ -R   # ipual 为当前用户，-R 表示递归更改该目录下所有文件
+sudo /etc/init.d/nfs-kernel-server start	#启动服务
+```
+3. 客户机连接
+```shell
+sudo mount -t nfs [192.x.12.123 IP]:/shared_folder /mnt/mount_target_folder -o nolock	#在客户机中将其mount过去
 ```
