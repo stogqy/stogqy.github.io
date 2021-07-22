@@ -151,6 +151,7 @@ NFS 即网络文件系统（Network File-System），可以通过网络让不同
 sudo apt-get install nfs-kernel-server  # 安装 NFS服务器端
 sudo apt-get install nfs-common         # 安装 NFS客户端
 ```
+
 2. 添加 NFS 共享目录
 
 ```shell
@@ -161,7 +162,9 @@ sudo chmod 777 shared_folder	#将某目录设置为共享目录，其权限设�
 sudo chown ipual:ipual /nfsroot/ -R   # ipual 为当前用户，-R 表示递归更改该目录下所有文件
 sudo /etc/init.d/nfs-kernel-server start	#启动服务
 ```
+
 3. 客户机连接
+
 ```shell
 sudo mount -t nfs [192.x.12.123 IP]:/shared_folder /mnt/mount_target_folder -o nolock	#在客户机中将其mount过去
 ```
