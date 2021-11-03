@@ -26,11 +26,7 @@ tags: Biology, Bioinfo, OrthoFinder, RasML, FastTree, ASTRAL
 
 #### 通过Orthofinder寻找单拷贝同源基因
 
-以下内容参考自改文章：[
-
-[「基因组学」使用OrthoFinder进]: https://www.jianshu.com/p/16e0bbb2ba19	"「基因组学」使用OrthoFinder进"
-
- ]
+以下内容参考自改文章：[「基因组学」使用OrthoFinder进行直系同源基因分析](https://www.jianshu.com/p/16e0bbb2ba19)
 
 OrthoFinder的分析过程分为如下几步:
 
@@ -40,7 +36,7 @@ OrthoFinder的分析过程分为如下几步:
 4. 构建直系同源组图(orthogroup graph)，用作MCL的输入
 5. 使用MCL对基因进行聚类，划分直系同源组
 
-![img](C:\Users\xwl\Documents\GitHub\stogqy.github.io\_posts\Pics\20211103\1.png)
+![img](https://raw.githubusercontent.com/stogqy/stogqy.github.io/master/_posts/Pics/20211103/1.png)
 
 OrthoFinder2在OrthoFinder的基础上增加了物种系统发育树的构建，流程如下：
 
@@ -51,7 +47,7 @@ OrthoFinder2在OrthoFinder的基础上增加了物种系统发育树的构建，
 
 基于Duplication-Loss-Coalescent 模型，有根基因树可以用来推断物种形成和基因复制事件，最后记录在统计信息中。
 
-![img](C:\Users\xwl\Documents\GitHub\stogqy.github.io\_posts\Pics\20211103\2.png)
+![img](https://raw.githubusercontent.com/stogqy/stogqy.github.io/master/_posts/Pics/20211103/2.png)
 
 OrthoFinder的使用非常方便，一行命令即可，但跑起来比较花时间：
 
@@ -107,7 +103,7 @@ STAG是一种从所有基因推测物种树的算法，不同于使用单拷贝�
 
 Orthogroups, Orthologs 和 Paralogs 这三个概念推荐看图理解。
 
-![img](C:\Users\xwl\Documents\GitHub\stogqy.github.io\_posts\Pics\20211103\3.png)
+![img](https://raw.githubusercontent.com/stogqy/stogqy.github.io/master/_posts/Pics/20211103/3.png)
 
 2. 利用MAFFT进行单同源基因的多序列比对
 
@@ -120,8 +116,6 @@ Orthogroups, Orthologs 和 Paralogs 这三个概念推荐看图理解。
 4. Concatenation法进行系统发育分析
 
 将上述trim好的多序列比对结果按照物种顺序进行串联，然后用RaxML或者FastTree进行分析。
-
-
 
 ```raxml -T <thread using> -f a -N <boostrap such as 100> -m <model such as JTT> -x 123456 -p 123456 -s <concatenated_alignment> -n <output.nwk>```
 
