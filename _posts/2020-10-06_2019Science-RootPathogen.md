@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "病原菌介导植物内生菌群抑病功能的激活"
-data: 2020-10-06
+data:  2020-10-06
 categories: Literatures
 tags: Biology
 ---
