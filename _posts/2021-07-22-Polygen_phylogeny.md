@@ -3,7 +3,7 @@ layout: post
 title: "多单拷贝基因串联构建物种发育树"
 data:  2021-11-03
 categories: Biotech
-tags: Biology, Bioinfo, OrthoFinder, RasML, FastTree, ASTRAL
+tags: Biology Bioinfo OrthoFinder RaxML FastTree ASTRAL
 ---
 
 * content
@@ -17,7 +17,7 @@ tags: Biology, Bioinfo, OrthoFinder, RasML, FastTree, ASTRAL
 ### 所需软件
 
 > - Orthofinder: 寻找单拷贝基因
-> -  MAFFT: 多序列比对
+> - MAFFT: 多序列比对
 > - TRIMAL: 多序列比对修剪 
 > - TRIMAL or FastTree: 串联法(concatenation)构建蛋白质系统发育树
 > - ASTRAL: 联合/合并法(coalescence)构建系统发育

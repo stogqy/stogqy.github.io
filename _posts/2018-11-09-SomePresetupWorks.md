@@ -3,7 +3,7 @@ layout: post
 title: "一些准备小小的工作"
 data:  2018-11-09
 categories: Tutorials
-tags:  tutorial github
+tags:  Tutorial Github
 ---
 
 * content

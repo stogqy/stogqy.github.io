@@ -3,7 +3,7 @@ layout: post
 title: "MAFFT序列比对图文教程 - 小白"
 data:  2018-11-10
 categories: Tutorials
-tags:  tutorial Biology
+tags:  Tutorial Biology
 ---
 
 * content
