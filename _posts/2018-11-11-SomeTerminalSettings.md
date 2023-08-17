@@ -12,66 +12,9 @@ tags: Terminal
 
 [本文引用KeithTt的博文](https://www.cnblogs.com/keithtt/)，我只是收集给自己看的，感谢分享。
 
-## Manjaro必备软件安装
+## 设置终端为短路径
 
-### 安装中文输入法
-```shell
-sudo pacman -S fcitx-im fcitx-configtool
-echo "GTK_IM_MODULE=fcitx" >> ~/.xprofile
-echo "QT_IM_MODULE=fcitx" >> ~/.xprofile
-echo "XMODIFIERS="@im=fcitx"" >> ~/.xprofile
-```
-### 其他软件
-```shell
-#安装yay
-sudo pacman -S yay
-#VS code
-yay -S visual-studio-code
-#网易云音乐
-yay -S netease-cloud-music
-#chrome
-sudo pacman -S google-chrome
-#WPS
-yay -S wps-office
-yay -S ttf-wps-fonts
-echo ‘export GTK_IM_MODULE=fcitx' >> /usr/bin/wps
-echo ‘export QT_IM_MODULE=fcitx' >> /usr/bin/wps
-echo ‘export XMODIFIERS="@im=fcitx"' >> /usr/bin/wps
-#docker
-sudo pacman -S docker
-sudo groupadd docker
-sudo gpasswd -a ${USER} docker
-sudo systemctl restart docker
-newgrp docker
-#anaconda-navigator
-source ~/anaconda3/bin/activate root
-anaconda-navigator
-conda install -c anaconda anaconda-navigator​	#如果找不到就安装
-```
-### 同步时间
-```shell
-timedatectl set-local-rtc 1 --adjust-system-clock
-timedatectl set-ntp 0
-```
-### 修改grub主题
-可以到`https://www.gnome-look.org/`下载合适的grub主题，比如我选择“Tela grub theme”这个，先把它下载下来，解压后放到系统主题：
-```shell
-#参考了这篇文章https://zhuanlan.zhihu.com/p/94331255
-tar jxf Tela-4k.tar.xz
-sudo cp -rf Tela /usr/share/grub/themes
-#将GRUB_THEME修改为GRUB_THEME="/usr/share/grub/themes/Tela/theme.txt"
-sudo vim /etc/default/grub
-```
-还可以按照这个方法https://github.com/vinceliuice/grub2-themes。即直接`./install.sh`然后`sudo update-grub`
-安装后重启即可。
-
-### 修改HOME目录为英文
-```shell
-sudo pacman -S xdg-user-dirs-gtk
-export LANG=en_US
-xdg-user-dirs-gtk-update
-export LANG=zh_CN.UTF-8
-```
+在`~/.bashrc`文件中，找到PS1变量，将其中的\w\变成大写的\W\，重新source一下即可。
 
 ## 设置终端颜色
 
