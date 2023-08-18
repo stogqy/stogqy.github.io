@@ -32,13 +32,26 @@ MySQL的语法其实就是平铺直叙的文本，通常用大写表示命令。
 
 ### 操作表
 
-查看表中前几行：`SELECT * FROM <table name> LIMIT <row count>`
-查看表信息：`DESCRIBE <table name>`
-查询：`SELECT * FROM <table name> WHERE <condition>`
-删除表：`DROP TABLE <table name>`
-删除数据：`DELETE FROM TABLE WHERE <condition>`
-清空：`TRUNCATE <table name>`或者`DELETE FROM <table name>`，前者快速删除不可回滚，后者逐条删除，可回滚。
+```shell
+#查看表中前几行：
+SELECT * FROM <table name> LIMIT <row count>
+#查看表信息：
+DESCRIBE <table name>
+#查询：
+SELECT * FROM <table name> WHERE <condition>
+#删除表：
+DROP TABLE <table name>
+#删除数据：
+DELETE FROM TABLE WHERE <condition>
+#清空
+TRUNCATE <table name>
+#或者
+DELETE FROM <table name> # 前者快速删除不可回滚，后者逐条删除，可回滚。
 
+# 查看表信息
+SHOW TABLE STATUS LIKE <table name>
+
+```
 
 ### 约束
 
@@ -64,7 +77,12 @@ INSERT INTO <table name> (<col1>, <col2>, <col3> ... ) VALUES (<value1>, <value2
 UPDATE <table name> SET `<col name>` = <value> `<col name>` = <value> where <condition> #如过不设置codition就对整张表进行更新
 # 删除数据
 DELETE FROM TABLE WHERE <condition>
-# 批量导入，确保local-infile 设置为on： `globale set local-infile=on`
+# 批量导入，确保local-infile 设置为on
+global set local_infile=on
+# 或者在登录的时候加上 local_infile=1
+# 查询local-infile 状态
+SHOW GLOBAL VARIABLES LIKE "local_infile"
+# 然后就可以导入了
 LOAD DATA INFILE <file path> 
 INTO <table name> 
 FIELDS TERMINATED BY ','
@@ -72,7 +90,8 @@ LINES TERMINATED BY '\n'
 ENCLOSED BY '"'
 CHARACTER SET utf8
 IGNORE <num> ROWS
-;
+
+
 ```
 
 
