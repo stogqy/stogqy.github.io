@@ -49,7 +49,7 @@ TRUNCATE <table name>
 DELETE FROM <table name> # 前者快速删除不可回滚，后者逐条删除，可回滚。
 
 # 查看表信息
-SHOW TABLE STATUS LIKE <table name>
+SHOW TABLE STATUS LIKE <table name> \G
 
 ```
 
@@ -78,8 +78,8 @@ UPDATE <table name> SET `<col name>` = <value> `<col name>` = <value> where <con
 # 删除数据
 DELETE FROM TABLE WHERE <condition>
 # 批量导入，确保local-infile 设置为on
-global set local_infile=on
-# 或者在登录的时候加上 local_infile=1
+set global local_infile=on
+# 或者在登录的时候加上 --local_infile=1
 # 查询local-infile 状态
 SHOW GLOBAL VARIABLES LIKE "local_infile"
 # 然后就可以导入了
@@ -92,9 +92,16 @@ CHARACTER SET utf8
 IGNORE <num> ROWS
 
 
+# 使用source file.sql批量导入
+# 设置关键参数
+set sql_log_bin=OFF;//关闭日志
+set autocommit=0;//关闭autocommit自动提交模式
+START TRANSACTION;//开启事务
+source <path to .sql file>
 ```
 
 
 ## 参考信息源
 
 1. [MySQL新手快速入门](https://blog.csdn.net/m0_58878709/article/details/128817956)
+2. [mysql快速导入多个大csv文件](https://blog.csdn.net/weixin_37095828/article/details/104167399)
